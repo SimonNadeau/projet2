@@ -1,0 +1,15 @@
+<div #results class="results">
+  <div *ngFor="let cars of this._render.getAllCars()" class="column">
+      <p class="title">{{cars._name}}</p>
+      <ul *ngFor="let result of cars.results">
+          <li> 
+              <p class="lap">{{result._name}}</p>
+              <p>{{result._minutes}}:{{result._seconds}}.{{result._hundredth}}</p>
+          </li>
+      </ul>
+      <div class="rank">{{this._raceService.getRank(cars, this._render.getAllCars())}}</div>
+  </div>
+  <div *ngIf="this._raceService.getRank(this._render.car, this._render.getAllCars()) === 1; then winBlock; else loseBlock"></div>
+  <ng-template #winBlock><div class="end-race">You won</div></ng-template> 
+  <ng-template #loseBlock><div class="end-race">You lose</div></ng-template> 
+</div>

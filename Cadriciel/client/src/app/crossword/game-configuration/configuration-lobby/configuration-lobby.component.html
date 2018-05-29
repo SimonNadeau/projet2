@@ -1,0 +1,21 @@
+<div id="lobbyContainer">
+  <h3>Lobby:</h3>
+  <div class="inputContainer">
+    <span class='blocking-span'>
+      <input #box  type="text" class="inputText" (keyup)="playerName = box.value" required/>
+      <span class="floating-label" [ngClass]="displayRedText()">Enter your name</span>
+    </span>
+  </div>
+  <h4 class="subtitle">Game available:</h4>
+  <div class="listContainer">
+    <div class="waitingGame" 
+    *ngFor="let room of rooms" 
+    [ngClass]="giveRoomColor(room)"
+    (click)= "joinGame(room)">
+      <h2 class="listContent">{{room.game.roomName}}</h2>
+      <h4 class="listContent">({{getGameDifficulty(room.game.difficulty)}})</h4>
+      <p class="label">Click to join</p>
+    </div>
+  </div>
+  <button id="createButton" [ngClass]="giveButtonClass()" (click)="emitOption(2)" >Create a game</button>
+</div>

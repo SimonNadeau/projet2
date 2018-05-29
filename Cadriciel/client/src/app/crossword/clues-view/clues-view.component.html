@@ -1,0 +1,34 @@
+<div class="across" >
+  <h3>Horizontal</h3>
+  <ul class="clues">
+    <li *ngFor="let clue of this.cluesService.clues">
+      <button *ngIf="!isVertical(clue)" 
+              [ngClass]="giveClueClass(clue)"
+              (click)="select(clue)" 
+              (click)="clickInside($event)"
+              [disabled]="wasFound(clue)">
+        {{clue.index}}<span>. </span>{{clue.definition}}
+      </button>
+    </li>
+  </ul>
+</div>
+
+<div class="down">
+  <h3>Vertical</h3>
+  <ul class="clues">
+    <li *ngFor="let clue of this.cluesService.clues">
+      <button *ngIf="isVertical(clue)" 
+              [ngClass]="giveClueClass(clue)"
+              (click)="select(clue)"
+              (click)="clickInside($event)" 
+              [disabled]="wasFound(clue)">
+        {{clue.index}}<span>. </span>{{clue.definition}}
+      </button>
+    </li>
+  </ul>
+</div>
+<div class="cheat-mode">
+  <button (click)="changeToCheatMode()">
+    <p>{{cheat ? "Normal Mode" : "Cheat Mode"}}</p>
+  </button>
+</div>

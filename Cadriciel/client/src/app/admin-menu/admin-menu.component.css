@@ -1,0 +1,201 @@
+#admin-menu-contrainer {
+  background-color: black;
+  border-color: greenyellow;
+  border-style: solid;
+  box-shadow: 1px 1px 0px 1px #97998b, 8px 8px 8px #000000, inset 0px 0px 2px 0px #000000;
+  color: greenyellow;
+  padding: 10px;
+  margin-top: 20px;
+  min-height: 300px; 
+}
+
+#title {
+  text-align: center;
+}
+
+.tracks {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 18em;
+}
+
+.tracks li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  width: 100%;
+}
+
+
+.tracks .text {
+  position: relative;
+  top: -3px;
+}
+
+.tracks .badge {
+  display: inline-block;
+  font-size: small;
+  color: greenyellow;
+  padding: 0.6em 0.7em 0.6em 0.7em;
+  border-color: greenyellow;
+  border-style: solid;
+  border-width: thin;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: 0px;
+  margin-right: .8em;
+}
+
+
+.selected {
+  left: 0em !important;
+  background-color: greenyellow;
+  color: black;
+  left: .1em;
+}
+
+.selected>.badge {
+  color: black!important;
+  background-color: greenyellow !important;
+  left: .1em !important;
+}
+
+.selected>.option {
+  display: inline;
+}
+
+.option {
+  color: white;
+  padding: 10px;
+  background-color: greenyellow;
+  display: none;
+  position: relative;
+  right: 5px;
+  top: 2px;
+  float:right;
+  border-color: #000000;
+  margin-left:2px;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+#delete-button {
+  background-image: url("./img/ic_delete_black_18px.svg");;
+  
+}
+#delete-button:hover{
+  background-color: rgb(247, 64, 64);
+}
+
+#edit-button {
+  background-image: url("./img/ic_mode_edit_black_18px.svg");
+}
+#edit-button:hover {
+  background-color: rgb(0, 119, 255);
+}
+
+#input-container{
+  position: absolute;
+  top: 21%;
+  left:12%;
+  border-color: greenyellow;
+  border-style: solid;
+  border-width: thin;
+  padding:10px;
+  margin-left: -10%;
+  margin-right:10%;
+
+}
+#input-container>span{
+ font-size: 18px;
+ display: block;
+ margin:5px;
+ text-align: right;
+}
+.input{
+  width:250px;  
+  resize: horizontal;
+  border-radius: 0px ;
+  border-color: black;
+  border-style: solid;
+  border-width: thin;
+  background-color: greenyellow;
+  color:black;
+}
+#input-container>input:active{
+  width:auto;
+}
+.action-button{
+  float:right;
+  color:greenyellow;
+  border-color: greenyellow;
+  border-style: solid;
+  border-width: thin;
+  background-color: black;
+  padding: 5px;
+  margin:5px;
+}
+#button-save:hover{
+  color:black;
+  background-color: greenyellow;
+}
+#button-cancel:hover{
+  color:black;
+  border-color: rgb(247, 64, 64);;
+  background-color: rgb(247, 64, 64);
+}
+#button-edit-track:hover{
+  color:black;
+  border-color: rgb(0, 119, 255);
+  background-color: rgb(0, 119, 255);
+}
+
+#addButton{
+  display: inline-block;
+  text-align: center;
+  color:greenyellow;
+  border-color: greenyellow;
+  border-style: solid;
+  border-width: thin;
+  background-color: black;
+  padding: 0.4em 0.8em 0.5em 0.7em; 
+  position: relative;
+  left: -1px;
+  top: 0px;
+}
+#addButton:hover{
+  color:black;
+  background-color: greenyellow;
+}
+.action-button {
+  float: right;
+  color: greenyellow;
+  border-color: greenyellow;
+  border-style: solid;
+  border-width: thin;
+  background-color: black;
+  padding: 10px;
+  margin: 5px;
+  bottom: 130px;
+  position: absolute;
+}
+#button-save{
+  right: 15px;
+}
+#button-cancel{
+  right: 85px;
+}
+#button-save:hover {
+  color: black;
+  background-color: greenyellow;
+}
+#button-cancel:hover {
+  color: black;
+  border-color: rgb(247, 64, 64);
+  background-color: rgb(247, 64, 64);
+}

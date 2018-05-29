@@ -1,0 +1,34 @@
+ 
+  <div id="trackList" align="left">
+      <h2>Choose your track</h2>
+      <ul class="tracks">
+        <li *ngFor="let track of tracks" [class.selected]="track === selectedTrack" (click)="onSelect(track)">
+          <div class="badge">{{track.id}} {{track.name}} </div>
+        </li>
+      </ul>
+    </div>
+
+    <div id="details">        
+      <div *ngIf="selectedTrack">
+            <h3>{{ selectedTrack.name | uppercase }} DETAILS</h3>
+            <div class="left">
+              <p><span>Name: </span>{{selectedTrack.name}}</p>
+              <p><span>Type: </span>{{selectedTrack.type}}</p>
+              <p><span>Description: </span>{{selectedTrack.description}}</p>
+            </div>
+            <div *ngIf="selectedTrack.timePlayed === 0" class="right"> 
+              <p>Never been played!</p>
+            </div>
+            <div *ngIf="selectedTrack.timePlayed !== 0" class="right">
+              <p><span>Time played: </span>{{selectedTrack.timePlayed}}</p>
+              <p><span>First Best Time: </span>{{this.getTime(0)}}</p>
+              <p><span>Second Best Time: </span>{{this.getTime(1)}}</p>
+              <p><span>Third Best Time: </span>{{this.getTime(2)}}</p>
+            </div>
+            <button (click)="emitSelectedTrack(selectedTrack)">GO!</button>
+        </div>
+    </div>
+
+    <div align="right" width="100%" height="100%">
+        <div #container id="scene"></div>
+    </div>

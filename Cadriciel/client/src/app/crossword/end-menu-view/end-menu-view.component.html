@@ -1,0 +1,14 @@
+<div id="filter"></div>
+<div id="config-container">
+  <h1 id="title">This is the end</h1>
+  <h3 id="message">{{this._message}}</h3>
+  <div *ngIf="!isWaiting">
+    <button  class="button"  (click) = "this.playAgainClick()">Play again</button>
+    <button  class="button" (click) = "this.menuClick()" >Menu</button>
+  </div>
+
+  <div *ngIf="isWaiting" id="waitingRoomContainer">
+    <div class="loader"></div>
+    <h3>Waiting for second player...</h3>
+  </div>
+</div>

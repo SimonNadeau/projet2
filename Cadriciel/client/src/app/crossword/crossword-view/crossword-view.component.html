@@ -1,0 +1,38 @@
+<app-game-configuration 
+  (notifyConfiguration)="this.configurationChoose = $event"
+  (notifyIsReadyToPlay)="startGame($event)"
+  [ngStyle]="{'display': this.gameIsConfig ? 'none': 'block'}">
+</app-game-configuration>
+
+<app-end-menu-view
+*ngIf="_endGame"
+(playAgainEmitter) = "($event) ? this.resetGame():'' "
+[gameMode] = "this._configurationChoose.gameMode"
+[socketEvent]= "this.socketEvents"
+[wonGame] = "this.isWinner">
+</app-end-menu-view>
+
+<div id="crossword-view-container" [ngStyle]="{'display': this.gameIsConfig ? 'block': 'none'}">
+  <h2 align="center">
+    {{title}}
+  </h2>
+  <div align="center">
+    <app-relevant-information-view>
+    </app-relevant-information-view>
+  </div>
+  
+  <div class="col" align="center">
+    <app-clues
+    (selectEmitter) = "this._socketEvents.sendWordSelected($event)"
+    ></app-clues>
+  </div>
+  <div class="col" align="center">
+    <app-grid-view
+    (selectEmitter) = "this._socketEvents.sendWordSelected($event)"
+    (wordFoundEmitter) = "updateScore($event)"
+    (endGameEmitter) = "this.endGame = $event" 
+    [gridGenerated] = "generateGridService.gridGenerated">
+    </app-grid-view>
+  </div>
+
+</div>

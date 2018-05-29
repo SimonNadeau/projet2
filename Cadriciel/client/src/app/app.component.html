@@ -1,0 +1,15 @@
+<div  *ngIf="this._isInMainMenu" id="filter"></div>
+<div *ngIf="this._isInMainMenu" id="config-container">
+    <h1 id="title">Welcome to Project 13</h1>
+    <button class="button" (click)="navigateTo('/crossword-view')"  routerLink="/crossword-view">Crossword</button>
+    <button class="button" (click)="navigateTo('/race-view')" routerLink="/race-view">Race Game</button>
+</div>
+
+<div *ngIf="!this._isInMainMenu" id="navbar">
+  <ul>
+    <li class="navbar-home" (click)="homeClick()" routerLink="/"></li>
+    <li class="navbar-button"><a (click)="navigateTo('/crossword-view')" >Crossword</a></li>
+    <li class="navbar-button"><a (click)="navigateTo('/race-view')" >Race</a></li>
+  </ul>
+</div>
+<router-outlet></router-outlet>

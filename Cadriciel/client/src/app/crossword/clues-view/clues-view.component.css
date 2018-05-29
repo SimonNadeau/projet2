@@ -1,0 +1,97 @@
+.clues {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  max-width: 35em;
+  max-height: 235px;
+  overflow-y: scroll;
+  background-color:#1f1f1f;
+  border-radius: 10px;
+  border: 0.062em solid #999;
+}
+
+button {
+  width: 95%;
+}
+
+.clue {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: rgb(235, 251, 246);
+  margin: .5em;
+  padding: .3em .3em;
+  height: auto;
+  border-radius: 4px;
+}
+
+.selected-clue {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: rgb(222,222,222);
+    margin: .5em;
+    padding: .3em .3em;
+    height: auto;
+    border-radius: 4px;
+}
+
+.found {
+  background-color: rgb(186, 218, 250);
+  text-decoration: rgba(54, 54, 54, 0.383);
+  text-decoration-line: line-through;
+  margin: .5em;
+  padding: .3em .3em;
+  height: auto;
+  border-radius: 4px;
+  font-style: italic;
+}
+.foundOther {
+  background-color: rgb(229, 188, 188);
+  text-decoration: rgba(54, 54, 54, 0.383);
+  text-decoration-line: line-through;
+  margin: .5em;
+  padding: .3em .3em;
+  height: auto;
+  border-radius: 4px;
+  font-style: italic;
+}
+
+.the-clue.selected:hover {
+  background-color: #BBD8DC !important;
+  color: white;
+}
+.the-clue:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+.the-clue .text {
+  position: relative;
+  top: -3px;
+}
+.clues .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #607D8B;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+.cheat-mode {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: auto;
+}
+
+button {
+  cursor: pointer;
+}

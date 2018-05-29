@@ -1,0 +1,22 @@
+<div #container>
+    <div class="begin-race" *ngIf="this.renderService.raceState.stateNumber==1; then primaryBlock; else elseBlock"></div>
+    <ng-template #primaryBlock><div class="count-race" >{{this.renderService.raceState.time()}}</div></ng-template>
+    <ng-template #elseBlock><div class="go-race" *ngIf="this.isShoingGo()">GO</div></ng-template>
+    
+    <ul class="display-top" *ngIf="this.renderService.raceState.stateNumber==2" (click)="saveResult(currentTrack)">
+        <li>Lap: {{this.renderService.car.lap}} of 3</li>
+        <li>Lap time: {{this.renderService.car.lapsTime.getFormattedMinutes()}}:{{this.renderService.car.lapsTime.getFormattedSeconds()}}.{{this.renderService.car.lapsTime.getFormattedHundredth()}} </li>
+        <li>Overall time: {{this.renderService.raceState.time()[2]}}:{{this.renderService.raceState.time()[1]}}.{{this.renderService.raceState.time()[0]}}  </li>
+    </ul>
+    <div *ngIf="this.renderService.raceState.stateNumber == 3">
+        <app-track-results></app-track-results>
+        <app-track-records [track] = "this.currentTrack" [id] = "this.id"></app-track-records>
+        <button (click)="replay()">Replay</button>
+        <button (click)="menu()" class="right">Back to menu</button>
+    </div>
+    <ul class="display-bottom">
+        <li>Speed: {{this.renderService.car.speed.length() * 3.6 | number :'2.2-2'}} km/h</li>
+        <li>Gear: {{this.renderService.car.currentGear + 1}}</li>
+        <li>RPM: {{this.renderService.car.rpm | number:'2.0-0'}}</li>
+    </ul>
+</div>

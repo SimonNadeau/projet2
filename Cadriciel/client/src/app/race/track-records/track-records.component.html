@@ -1,0 +1,15 @@
+<div #records>
+  <div *ngIf="this.gotRecord(this._render.car)">
+    <h2>You got a record !</h2>
+  </div>
+<div class="best-times">
+  <h1> - - - - - - - Best times - - - - - - - </h1>
+  <ul *ngFor="let record of this._currentTrack.bestTime; let ind = index">
+      <li class="record"><span class="left">{{ind + 1}}.  {{record.playerName}}</span> .................... <span class="right">{{record.minutes}}:{{record.seconds}}:{{record.hundredths}}</span></li>
+  </ul>
+  <div *ngIf="!this._upToDate" class="update">
+    <p class="result">Your result <span>{{this.getRecordTime(this._render.car)}}</span> gets you at <span>Rank {{this.getRankRecord(this._render.car) + 1}}</span></p>
+    <input #box placeholder="To save your result, enter your name" (keyup)="name = box.value" (keydown)="submitName($event)">
+  </div>
+</div>
+</div>

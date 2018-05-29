@@ -1,0 +1,136 @@
+h2 {
+  margin-left: 20px;
+  white-space: nowrap;
+  font-style: italic;
+}
+
+h3 {
+  padding-top: 20px;
+  white-space: nowrap;
+  font-style: italic;
+  text-align: center;
+}
+#trackList {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  left: 200px;
+  width: 100px;
+  margin:0;
+}
+.selected {
+  background-color: #000 !important;
+  color: goldenrod !important;
+}
+.tracks {
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+.tracks li {
+  cursor: pointer;
+  position: relative;
+  border: solid 1px #fff;
+  left: 0;
+  padding: .3em 0;
+  height: 1.6em;
+  text-transform: uppercase;
+  color: #000;
+  background-color: rgba(218,165,32,0.5);
+}
+.tracks li.selected:hover {
+  background-color: rgba(0,0,0,0.75) !important;
+  color: gold;
+}
+.tracks li:hover {
+  color: gold;
+  background-color: rgba(0,0,0,0.75);
+  left: .1em;
+}
+.tracks .text {
+  position: relative;
+  top: -3px;
+}
+.tracks .badge {
+  display: inline-block;
+  font-size: small;
+  color: inherit;
+  line-height: 35px;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  margin-right: .8em;
+  padding-left:10px;
+}
+
+.badge {
+  display: inline;
+}
+
+#scene {
+  position: absolute;
+  top: 100px;
+  right: 200px;
+  width: 500px;
+  height: 400px;
+  margin: 0;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.75);
+  border: solid 3px goldenrod;
+}
+
+#details {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  display: block;
+  float: none;
+  margin: 0 auto;
+  top: 450px;
+  left: 0;
+  max-height: 150px;
+  width: 90%;
+  background-color: rgba(0,0,0,0.9);
+  color: goldenrod;
+}
+
+#details p {
+  padding:0;
+  margin:0;
+}
+
+.left {
+  position: relative;
+  display: inline;
+  top: -20px;
+  left: 150px;
+}
+
+.right {
+  position: relative;
+  display: inline;
+  float: right;
+  text-align: right;
+  top: -92px;
+  right: 250px;
+}
+
+.left span, .right span {
+  color: #AAA;
+}
+
+#details button {
+  position: relative;
+  display: block;
+  float: none;
+  margin: auto;
+  height: 50px;
+  width: 100px;
+  bottom: 60px;
+  left: 62px;
+  background-color: gold;
+  color: #000;
+  font-size: 28px;
+  font-style: italic;
+}

@@ -1,0 +1,16 @@
+<div id="input-container">
+  <h4 id="title">Updating a track</h4>
+  <span>Name: <input id="nameInput" class="input" type="text" value={{trackName}} maxlength="18"
+    [(ngModel)]="trackName"> </span>
+  <span>Description: <input id="descInput" class="input"  type="text" value={{trackDescription}} [(ngModel)]="trackDescription"> </span>
+  <button id="button-save" class="action-button" (click)="toggleSaveEvent()" >Save</button>
+  <button id="button-edit-track" class="action-button" (click)="editTrackClick()">Edit track</button>
+  <button id="button-cancel" class="action-button" (click)="cancelClick()">Cancel</button>
+</div>
+
+<div *ngIf="this._saving" id="saving-container">
+  <h4>Saving options</h4>
+  <button id="button-save" class="action-button" (click)="saveAsNew()">Save as new</button>
+  <button id="button-save" class="action-button" (click)="saveOver(theTrack._id)">Save over</button>
+  <button id="button-cancel" class="action-button" (click)="toggleSaveEvent()">cancel</button>
+</div>

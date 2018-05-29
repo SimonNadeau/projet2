@@ -1,0 +1,22 @@
+<div class="crossword-container">
+  <div id="grid-container" *ngIf="gridGenerated">
+    <div *ngFor="let row of this.gridService.content; let j = index">
+        <div *ngFor="let col of row; let i = index"  class="grid-row" >
+            <div class="square" [ngClass]="giveSquareClass(col)">
+              <p class="content" (click)="select(col)" (click)="clickInside($event)">
+                <input  #box [appFocus]="i===this.gridService.focusI && j===this.gridService.focusJ" type="text" 
+                        [maxLength]="1" *ngIf="!isEmpty(col)" (keydown)="(omitSpecialCharacter($event))" 
+                        (keyup)="setSpaceTempChar(col, box.value, $event, i, j)" [disabled]="col.isFilled"
+                        value = {{fillBox(col)}}>
+              </p>
+              <div *ngIf="col.isFirst" class="index">{{col.index}}</div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div id="waitingRoomContainer" *ngIf="!gridGenerated">
+    <div class="loader"></div>
+    <h3>Loading crossword...</h3>
+  </div>
+</div>

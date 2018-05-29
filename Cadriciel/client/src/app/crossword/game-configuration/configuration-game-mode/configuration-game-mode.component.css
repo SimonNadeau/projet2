@@ -1,0 +1,22 @@
+#gameModeContainer{
+    margin-top: 5%;
+    padding-bottom: 5%; 
+    display: block;
+    text-align: center; 
+}
+#gameModeContainer>h3{
+    margin-left:30px;
+    text-align: left;
+}
+.button{
+    margin-top: 5%;
+    margin: 5%;
+    padding: 10px 20px;
+    border-style: solid; 
+    border-color: #333;
+}
+.button:hover{
+    background-color: rgb(235, 251, 246);
+    border-color: rgb(235, 251, 246);
+    box-shadow: 0px 0px 8px rgb(22, 22, 22);
+}

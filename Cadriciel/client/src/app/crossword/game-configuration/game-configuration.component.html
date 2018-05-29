@@ -1,0 +1,25 @@
+<div id="filter"></div>
+<div id="config-container">
+  <h1 id="title">Game Configuration</h1>
+  <app-configuration-game-mode
+  [ngStyle]="{'display': compareMenuState(1) ? 'block': 'none'}"
+  (notifyGameMode)="gameMode = $event ">
+  </app-configuration-game-mode>
+
+  <app-configuration-difficulty
+  *ngIf = "compareMenuState(2)"
+  (notifyDiffuclty)="difficulty = $event">
+  </app-configuration-difficulty>
+
+  <app-configuration-lobby
+  *ngIf = "compareMenuState(3)"
+  (notifyLobbyOption)="lobbyOption = $event"
+  (notifyPlayerName)="playerName = $event"
+  (notifyJoinRoom) = "joinSocketRoom($event)">
+  </app-configuration-lobby>
+
+  <app-configuration-waiting-room
+  *ngIf = "compareMenuState(4)">
+  </app-configuration-waiting-room>
+
+</div>

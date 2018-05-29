@@ -1,0 +1,10 @@
+<app-tracks
+*ngIf = "!_gameStarted"
+[tracks] = "this.tracks"
+(seletedTrackEmitter) = "startGame($event)">
+</app-tracks>
+<app-game-component
+*ngIf = "_gameStarted"
+[track] = "this.trackChoosed"
+[id] = "this.trackChoosed._id">
+</app-game-component>

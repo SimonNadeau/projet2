@@ -1,0 +1,20 @@
+export const SOCKETS_CALLS = {
+    connection: "connection",
+    connected: "connected",
+    createRoom: "createRoom",
+    joinRoom: "joinRoom",
+    playerJoin: "playerJoined",
+    readyToPlay: "readyToPlay",
+    startGame: "startGame",
+    playerRejected: "playerRejected",
+    initializeGame: "initializeGame",
+    playerEnterRoom: "playerEnterRoom",
+    wordSelected: "wordSelected",
+    wordFound: "wordFound",
+    gameCreated: "gameCreated",
+    disconnect: "disconnect",
+    playerDisconnect: "playerDisconnect",
+    updateScore: "updateScore",
+    endGame: "endGame",
+    playAgain: "playAgain"
+}

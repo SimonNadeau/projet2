@@ -1,0 +1,39 @@
+
+<div id="admin-menu-contrainer" [ngStyle]="{'display': !compareCurrentState(3) ? 'block': 'none'}" >
+  <h3 id="title">###### Welcome to the Administrator's secret menu ######</h3>
+  <ul class="tracks"
+  [ngStyle]="{'display': (compareCurrentState(0))? 'block':'none' }">
+    <li  *ngFor="let track of this._tracks" 
+    [class.selected]="track === selectedTrack" 
+    (mouseenter)="onSelect(track)"
+    (mouseleave)="onSelect(!track)">
+      <span class="badge">{{getTrackIndex(track)+1}}.</span>{{track.name}}
+      <button id="delete-button" class="option"(click)="deleteEvent(track._id)" ></button>
+      <button  id="edit-button" class="option" (click)="updateEvent(track)"></button>
+    </li>
+    <li><button id="addButton" (click)="addingEvent()" >+</button></li>
+  </ul>
+<app-admin-update *ngIf = "compareCurrentState(2)"
+  [theTrack]="this._editTrack"
+  [trackName]=" (compareCurrentState(2)) ? this._editTrack.name:''"
+  [trackDescription]=" (compareCurrentState(2)) ? this._editTrack.description:''"
+  (notify) = "$event ? updateEvent(this._editTrack):''"
+  (notifyEditor) = "editorEvent()"
+  [savedNodes] = "this._savedNodes"  
+  ></app-admin-update>
+  <app-admin-add [ngStyle]="{'display': compareCurrentState(1) ? 'block': 'none'}"
+  (notifyExit) ="$event ? addingEvent():''"
+  (notifyEditor) = "editorEvent()"
+  [savedNodes] = "this._savedNodes"
+  [newTrack] = "this._editTrack"  
+  ></app-admin-add>
+
+</div>
+<div id="editor"   [ngStyle]="{'display': compareCurrentState(3) ? 'block': 'none'}">
+  <app-track-editor
+    (notifySaveTrack) = "setSavedNodes($event)"
+    [viewStatus] = "compareCurrentState(3)"> 
+  </app-track-editor>
+  <button id="button-save" class="action-button" (click)="editorEvent()" >Save</button>
+  <button id="button-cancel" class="action-button" (click)="cancelEditorMode()" >Cancel</button>
+</div>

@@ -1,0 +1,98 @@
+.best-times {
+  position: relative;
+  float: right;
+  top: 200px;
+  width: 350px;
+  height: 250px;
+  background-color: rgba(0,0,0,0.75);
+  color: goldenrod;
+  font-size: 14px;
+  display: inline-block;
+  border-radius: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: solid 1px goldenrod;
+  margin-right: 50px;
+}
+.best-times ul li{
+  color: goldenrod;
+  font-size: 14px;
+  display: block;
+  text-align: right;
+  position: relative;
+  width: 90%;
+  margin-right: 20px;
+}
+
+.record {
+  margin-right: 20px !important;
+  padding-right: 20px !important;
+}
+
+.update {
+  margin-top: 20px;
+  color: #AAA;
+}
+
+h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #AAA;
+  font-size: 20px;
+  font-style: italic;
+  margin-left: 25px;
+  text-transform: uppercase;
+}
+
+.name {
+  display: inline;
+}
+
+h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: goldenrod;
+  font-size: 30px;
+  font-style: italic;
+  margin-left: 25px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 100px;
+  right: 50px;
+}
+
+span .left {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 80px;
+  float: left;
+  text-align: left;
+}
+
+span .right {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 80px;
+  float: right;
+  text-align: right;
+}
+
+.message, .result, input {
+  width: 100%;
+  text-align: center;
+}
+
+.result span {
+  color: greenyellow;
+}
+
+input {
+  position: relative;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.50) !important;
+  color: goldenrod;
+  border: none;
+  line-height: 16px;
+  height: 20px;
+  z-index: 500000;
+}
+

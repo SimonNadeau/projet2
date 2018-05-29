@@ -1,0 +1,21 @@
+.col{
+    float:left;
+    width:50%;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear:both;
+}
+
+/* .cheat-mode {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: auto;
+}
+
+button {
+    cursor: pointer;
+} */

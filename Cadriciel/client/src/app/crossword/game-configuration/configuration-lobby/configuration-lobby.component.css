@@ -1,0 +1,135 @@
+#lobbyContainer {
+  margin-top: 5%;
+  padding-bottom: 5%;
+  display: block;
+  text-align: center;
+}
+
+#lobbyContainer>h3 {
+  margin-left: 30px;
+  text-align: left;
+}
+
+.button {
+  margin-top: 5%;
+  margin: 5%;
+  padding: 10px 20px;
+  border-style: solid;
+  border-color: #333;
+}
+
+.button:hover {
+  background-color: rgb(235, 251, 246);
+  border-color: rgb(235, 251, 246);
+  box-shadow: 0px 0px 8px rgb(22, 22, 22);
+}
+
+.buttonNotAvailable {
+  margin-top: 5%;
+  margin: 5%;
+  padding: 10px 20px;
+  border-style: solid;
+  background-color: rgb(141, 141, 141);
+  color: rgb(235, 251, 246);
+  border-color: rgb(235, 251, 246);
+}
+
+.inputContainer {
+  position: relative;
+  text-align: left;
+  padding-top: 10px;
+  margin-left: 30px;
+}
+
+.inputText {
+  font-size: 14px;
+  width: 200px;
+  height: 25px;
+  background-color: #333;
+  border:none;
+  border-bottom:1px solid  rgb(235, 251, 246);
+  color: rgb(235, 251, 246);
+  outline: none;
+  
+}
+.inputTextRed {
+  color: rgb(255, 2, 2);
+}
+input:focus {
+    outline: none;
+}
+.floating-label {
+  position: absolute;
+  pointer-events: none;
+  left: 0px;
+  top: 18px;
+  transition: 0.2s ease all;
+}
+
+input:focus~.floating-label,
+input:not(:focus):valid~.floating-label {
+  top: -6px;
+  outline: none;
+}
+.subtitle{
+  text-align: left;
+  margin-bottom: 0px;
+  margin-left: 30px;
+}
+.listContainer{
+  height: 237.5px;
+  width: auto;
+  margin: 0px 30px;
+  border:1px solid  rgb(235, 251, 246);
+  overflow: scroll;
+}
+
+.waitingGame{
+  height: 50px;
+  width: auto;
+  margin: 6.333px;
+  padding-top: 12.5px;
+  border:3px solid  rgb(235, 251, 246);
+  transition: 0.5s ease all;
+}
+.waitingGame:hover{
+  padding-top: 7.5px;
+  padding-bottom: 5px;   
+  transition: 0.5s ease all;
+}
+.listContent{
+  margin: 0px;
+  text-align: center;  
+  display: inline-block; 
+  color: #333;   
+}
+.waitingGame:hover > .label{
+  display: block;
+}
+.easyGame {
+  background-color:rgb(159, 230, 138);
+  border-color:rgb(137, 199, 119);
+}
+.mediumGame {
+  background-color:rgb(230, 221, 138);
+  border-color:rgb(199, 191, 119);
+}
+.hardGame {
+  background-color:rgb(230, 138, 138);
+  border-color:rgb(185, 108, 108);
+}
+.easyGame:hover {
+  background-color:rgb(181, 255, 159);
+}
+.mediumGame:hover {
+  background-color:rgb(255, 247, 180);
+}
+.hardGame:hover {
+  background-color:rgb(230, 138, 138);
+  background-color:rgb(255, 181, 181);
+}
+.label{
+  color:rgba(83, 83, 83, 0.883);
+  margin:0px;
+  display: none;
+}

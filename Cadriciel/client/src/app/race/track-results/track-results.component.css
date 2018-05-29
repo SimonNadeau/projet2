@@ -1,0 +1,93 @@
+.end-race {
+  top: 5px;
+  left: 325px;
+  position: relative;
+  font-size: 40px;
+  font-style: italic;
+  width: 100%;
+  color: rgba(218,165,32,0.7);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 10000;
+}
+
+.results {
+  top: 200px;
+  left: 50px;
+  position: relative;
+  float: left;
+  background-color: rgba(0,0,0,0.75);
+  color: goldenrod;
+  font-size: 14px;
+  display: inline-block;
+  width: 800px;
+  height: 250px;
+  border-radius: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: solid 1px goldenrod;
+  padding-top: 30px;
+}
+
+.results ul {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.column {
+  margin: 0;
+  padding: 0 8px;
+  position: relative;
+  width: 170px;
+  height: auto;
+  /* display: inline; */
+  float: left;
+}
+
+.column ul li {
+  position: relative;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  right: 40px;
+  top: -20px;
+  text-align: right;
+}
+
+.column ul li p {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+.title {
+  top: -20px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-size: 18px;
+  font-style: italic;
+  position: relative;
+  left: -10px;
+  text-align: center;
+}
+
+.lap {
+  padding: 0;
+  margin: 0;
+  display: inline;
+  position: relative;
+  left: -20px;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.rank {
+  position: relative;
+  font-size: 28px;
+  color: gold;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  font-style: italic;
+  border: solid 1px goldenrod;
+  border-radius: 20px;
+}

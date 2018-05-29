@@ -1,0 +1,43 @@
+#difficultyContainer{
+    margin-top: 5%;
+    padding-bottom: 5%; 
+    display: block;
+    text-align: center; 
+}
+#difficultyContainer>h3{
+    margin-left:30px;
+    text-align: left;
+}
+.button{
+    margin-top: 5%;
+    margin: 5%;
+    padding: 10px 20px;
+    border-style: solid; 
+    border-color: #333;
+}
+.button:hover{
+    background-color: rgb(235, 251, 246);
+    border-color: rgb(235, 251, 246);
+    box-shadow: 0px 0px 8px rgb(22, 22, 22);
+}
+#easyButton{
+    background-color:rgb(159, 230, 138);
+}
+#easyButton:hover{
+    background-color:rgb(181, 255, 159);
+    border-color: rgb(181, 255, 159);
+}
+#mediumButton{
+    background-color:rgb(230, 221, 138);
+}
+#mediumButton:hover{
+    background-color:rgb(255, 247, 180);
+    border-color:rgb(255, 247, 180);
+}
+#hardButton{
+    background-color:rgb(230, 138, 138);
+}
+#hardButton:hover{
+    background-color:rgb(255, 181, 181);
+    border-color:rgb(255, 181, 181);
+}

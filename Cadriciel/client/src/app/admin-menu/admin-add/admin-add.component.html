@@ -1,0 +1,13 @@
+<div id="input-container">
+  <h4 id="title">Adding a track</h4>
+  <span>
+      Name: <input id="nameInput" class="input" type="text" placeholder="Enter the track name"  maxlength="18"
+     [(ngModel)]="trackName">
+  </span>
+  <span>
+      Description: <input id="descInput" class="input"  type="text" placeholder="Enter the track description" [(ngModel)]="trackDescription">
+  </span>
+  <button id="button-save" class="action-button" (click)="addEvent()">Save</button>
+  <button id="button-edit-track" class="action-button" (click)="editTrackClick()" >Edit track</button>
+  <button id="button-cancel" class="action-button" (click)="cancelClick()">Cancel</button>
+</div>
